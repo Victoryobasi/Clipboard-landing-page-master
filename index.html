@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: font;
+        src: url(Bai_Jamjuree/BaiJamjuree-Regular.ttf);
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: font;
+        gap: 50px;
+        background-image: url(./images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+      }
+      .clipboard {
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        margin-top: 40px;
+      }
+      .history {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        /* width: 100%; */
+        margin: 0 auto;
+      }
+      .historytext {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .historytext img {
+        width: 100px;
+        height: 100px;
+        margin: 0px auto;
+      }
+      .history h2 {
+        font-size: 34px;
+        color: hsl(210, 10%, 33%);
+      }
+      .history p {
+        width: 60%;
+        margin: 0px auto;
+        font-size: 16px;
+        color: hsl(201, 11%, 66%);
+      }
+      .download {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+      .snippets {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        /* margin: 20px auto; */
+        /* width: 100%; */
+      }
+      .track {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .desktop {
+        display: flex;
+        gap: 60px;
+      }
+      .desktoptext {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        /* padding: 50px; */
+      }
+      .text1 {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-top: 40px;
+      }
+      .mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+      .Supercharge {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        margin-top: -65px;
+      }
+      .Superchargeimages {
+        display: flex;
+        text-align: center;
+      }
+      .super {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .blacklists {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 70%;
+      }
+      .socialimages {
+        width: 70%;
+        margin: 0px auto;
+        display: flex;
+        gap: 10%;
+        justify-content: center;
+      }
+
+      .Clipboard {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: hsl(210, 10%, 33%);
+        /* padding: 20px; */
+        /* justify-content: space-between; */
+      }
+      .content {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .content1 {
+        display: flex;
+        gap: 50px;
+        /* align-items: center; */
+      }
+      .content2 {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .download1 {
+        width: 190px;
+        height: 50px;
+        align-content: center;
+        border-radius: 25px;
+        font-size: 18px;
+      }
+      .track h2 {
+        font-size: 30px;
+        color: hsl(210, 10%, 33%);
+      }
+      .track p {
+        width: 55%;
+        margin: 0px auto;
+        font-size: 16px;
+        color: hsl(201, 11%, 66%);
+      }
+      .text1 h4 {
+        font-size: 22px;
+        color: hsl(210, 10%, 33%);
+      }
+      .text1 p {
+        font-size: 16px;
+        width: 60%;
+        color: hsl(201, 11%, 66%);
+      }
+      .access {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .access h2 {
+        font-size: 30px;
+        color: hsl(210, 10%, 33%);
+      }
+      .access p {
+        font-size: 18px;
+        width: 40%;
+        margin: 0px auto;
+        color: hsl(201, 11%, 66%);
+      }
+      .Superchargeimages img {
+        width: 70px;
+        height: 70px;
+        margin: 0px auto;
+      }
+      .blacklists h4 {
+        font-size: 24px;
+      }
+      .blacklists p {
+        font-size: 18px;
+        width: 50%;
+        margin: 0px auto;
+      }
+      .super h3 {
+        font-size: 30px;
+        color: hsl(210, 10%, 33%);
+      }
+      .super p {
+        font-size: 18px;
+        color: hsl(201, 11%, 66%);
+      }
+      .content1 img {
+        width: 70px;
+        height: 70px;
+      }
+      .board h3 {
+        font-size: 34px;
+      }
+      .board p {
+        font-size: 18px;
+        width: 40%;
+        margin: 0px auto;
+      }
+      .blacklists h4 {
+        font-size: 20px;
+        color: hsl(210, 10%, 33%);
+      }
+      .blacklists p {
+        font-size: 16px;
+        color: hsl(201, 11%, 66%);
+      }
+      .board {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .board h3 {
+        font-size: 30px;
+        color: hsl(210, 10%, 33%);
+      }
+      .board p {
+        font-size: 16px;
+        color: hsl(201, 11%, 66%);
+      }
+      .footerp {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: hsl(201, 11%, 66%);
+      }
+      .download1{
+        background-color: hsl(171, 66%, 44%);
+        color: white;
+      }
+      .download1:hover{
+      border: 1px solid black;
+      background-color: burlywood;
+      cursor: pointer;
+      opacity: 0.9;
+      }
+      .download2{
+        background-color: hsl(233, 100%, 69%);
+        width: 190px;
+        height: 50px;
+        align-content: center;
+        border-radius: 25px;
+        font-size: 18px;
+        color: white;
+      }
+      .download2:hover{
+        border: 1px solid black;
+        background-color: brown;
+        cursor: pointer;
+        opacity: 0.9;
+      }
+      @media (max-width: 600px) {
+        main {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .clipboard {
+          display: flex;
+          flex-direction: column;
+          gap: 80px;
+          padding: 20px;
+        }
+        .download {
+          display: flex;
+          flex-direction: column;
+          margin: 0px auto;
+        }
+        .history h2 {
+          /* width: 90%; */
+          margin: 0px auto;
+        }
+        .history p {
+          width: 90%;
+          margin: 0px auto;
+        }
+        .desktopimage img {
+          width: 100%;
+        }
+        .desktop {
+          display: flex;
+          flex-direction: column;
+        }
+        .text1 {
+          text-align: center;
+        }
+        .text1 p {
+          width: 100%;
+        }
+        .track p {
+          width: 100%;
+        }
+        .access p {
+          width: 100%;
+        }
+        .imagemob img {
+          width: 100%;
+        }
+        .Superchargeimages {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+        }
+        .blacklists {
+          margin: 0px auto;
+        }
+        .blacklists p{
+          width: 100%;
+        }
+        .socialimages {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+        }
+        .socialimages img {
+          width: 110px;
+          margin: 0px auto;
+        }
+        .Clipboard {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+        .board p {
+          width: 100%;
+        }
+        footer {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .content{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin: 0px auto;
+          gap: 50px;
+        }
+        .content1{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+        }
+        .footerp{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        .download1 {
+        width: 300px;
+        height: 50px;
+        align-content: center;
+        border-radius: 25px;
+        font-size: 18px;
+      }
+      .download2{
+        width: 300px;
+        height: 50px;
+        align-content: center;
+        border-radius: 25px;
+        font-size: 18px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="clipboard">
+        <div class="history">
+          <div class="historytext">
+            <img src="./images/logo.svg" alt="" />
+            <h2>A history of everything you copy</h2>
+            <p>
+              Clipboard allows you to track and organize everything you copy.
+              Instantly access your clipboard on all your devices.
+            </p>
+          </div>
+          <div class="download">
+            <div class="download1">Download for iOS</div>
+            <div class="download2">Download for Mac</div>
+          </div>
+        </div>
+        <div class="snippets">
+          <div class="track">
+            <h2>Keep track of your snippets</h2>
+            <p>
+              Clipboard instantly stores any item you copy in the cloud, meaning
+              you can access your snippets immediately on all your devices. Our
+              Mac and iOS apps will help you organize everything.
+            </p>
+          </div>
+          <div class="desktop">
+            <div class="desktopimage">
+              <img src="./images/image-computer.png" alt="" />
+            </div>
+            <div class="desktoptext">
+              <div class="text1">
+                <h4>Quick Search</h4>
+                <p>
+                  Easily search your snippets by content, category, web address,
+                  application, and more.
+                </p>
+              </div>
+              <div class="text1">
+                <h4>iCloud Sync</h4>
+                <p>
+                  Instantly saves and syncs snippets across all your devices.
+                </p>
+              </div>
+              <div class="text1">
+                <h4>Complete History</h4>
+                <p>
+                  Retrieve any snippets from the first moment you started using
+                  the app.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile">
+          <div class="access">
+            <h2>Access Clipboard anywhere</h2>
+            <p>
+              Whether you’re on the go, or at your computer, you can access all
+              your Clipboard snippets in a few simple clicks.
+            </p>
+          </div>
+          <div class="imagemob">
+            <img src="./images/image-devices.png" alt="" />
+          </div>
+        </div>
+        <div class="Supercharge">
+          <div class="super">
+            <h3>Supercharge your workflow</h3>
+            <p>We’ve got the tools to boost your productivity.</p>
+          </div>
+          <div class="Superchargeimages">
+            <div class="blacklists">
+              <img src="./images/icon-blacklist.svg" alt="" />
+              <h4>Create blacklists</h4>
+              <p>
+                Ensure sensitive information never makes its way to your
+                clipboard by excluding certain sources.
+              </p>
+            </div>
+            <div class="blacklists">
+              <img src="./images/icon-text.svg" alt="" />
+              <h4>Plain text snippets</h4>
+              <p>
+                Remove unwanted formatting from copied text for a consistent
+                look.
+              </p>
+            </div>
+            <div class="blacklists">
+              <img src="./images/icon-preview.svg" alt="" />
+              <h4>Sneak preview</h4>
+              <p>
+                Quick preview of all snippets on your Clipboard for easy access.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="socialimages">
+          <img src="./images/logo-google.png" alt="" />
+          <img src="./images/logo-ibm.png" alt="" />
+          <img src="./images/logo-microsoft.png" alt="" />
+          <img src="./images/logo-hp.png" alt="" />
+          <img src="./images/logo-vector-graphics.png" alt="" />
+        </div>
+        <div class="Clipboard">
+          <div class="board">
+            <h3>Clipboard for iOS and Mac OS</h3>
+            <p>
+              Available for free on the App Store. Download for Mac or iOS, sync
+              with iCloud and you’re ready to start adding to your clipboard.
+            </p>
+          </div>
+          <div class="download">
+            <div class="download1">Download for iOS</div>
+            <div class="download2">Download for Mac</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="content">
+        <div class="content1">
+          <img src="./images/logo.svg" alt="" />
+          <div class="footerp">
+            <p>FAQs</p>
+            <p>Contact Us</p>
+          </div>
+          <div class="footerp">
+            <p>Privacy Policy</p>
+            <p>Press Kit</p>
+          </div>
+          <div class="footerp">
+            <p>Install Guide</p>
+          </div>
+        </div>
+        <div class="content2">
+          <img src="./images/icon-facebook.svg" alt="" />
+          <img src="./images/icon-twitter.svg" alt="" />
+          <img src="./images/icon-instagram.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
